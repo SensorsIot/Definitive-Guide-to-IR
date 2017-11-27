@@ -29,7 +29,7 @@ Based on the Examples of the libraries
 
 
 #include <IRremote.h>
-#include <credentials.h>
+//#include <credentials.h>
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
 #include <WiFi.h>
