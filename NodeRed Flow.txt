@@ -1,0 +1,145 @@
+[
+    {
+        "id": "f30a097.f8d40f8",
+        "type": "tab",
+        "label": "Flow 1"
+    },
+    {
+        "id": "8fa2dbe5.74aee8",
+        "type": "mqtt in",
+        "z": "f30a097.f8d40f8",
+        "name": "",
+        "topic": "IR/key/#",
+        "qos": "0",
+        "broker": "d0e87662.1eee38",
+        "x": 213,
+        "y": 159,
+        "wires": [
+            [
+                "db6529a8.01fe28",
+                "b6c146e9.dfd9b8"
+            ]
+        ]
+    },
+    {
+        "id": "db6529a8.01fe28",
+        "type": "debug",
+        "z": "f30a097.f8d40f8",
+        "name": "",
+        "active": false,
+        "console": "false",
+        "complete": "false",
+        "x": 427,
+        "y": 143,
+        "wires": []
+    },
+    {
+        "id": "452eabcd.fafff4",
+        "type": "mqtt out",
+        "z": "f30a097.f8d40f8",
+        "name": "IR",
+        "topic": "IR/command",
+        "qos": "0",
+        "retain": "true",
+        "broker": "d0e87662.1eee38",
+        "x": 840,
+        "y": 338,
+        "wires": []
+    },
+    {
+        "id": "5196fbb4.6894e4",
+        "type": "inject",
+        "z": "f30a097.f8d40f8",
+        "name": "ON",
+        "topic": "keyboard/command/",
+        "payload": "{\"type\":\"3\",  \"value\": \"1303527870\",\"length\":\"32\"}",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 194,
+        "y": 304,
+        "wires": [
+            [
+                "452eabcd.fafff4",
+                "cb6c6a34.d8e2e8"
+            ]
+        ]
+    },
+    {
+        "id": "79d96dc1.7f97a4",
+        "type": "inject",
+        "z": "f30a097.f8d40f8",
+        "name": "OFF",
+        "topic": "keyboard/command/",
+        "payload": "{\"type\":\"3\",  \"value\": \"1303526340\",\"length\":\"32\"}",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 198,
+        "y": 382,
+        "wires": [
+            [
+                "452eabcd.fafff4",
+                "cb6c6a34.d8e2e8"
+            ]
+        ]
+    },
+    {
+        "id": "b6c146e9.dfd9b8",
+        "type": "json",
+        "z": "f30a097.f8d40f8",
+        "name": "",
+        "pretty": false,
+        "x": 441,
+        "y": 216,
+        "wires": [
+            [
+                "67db247e.b102ac"
+            ]
+        ]
+    },
+    {
+        "id": "67db247e.b102ac",
+        "type": "debug",
+        "z": "f30a097.f8d40f8",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 697,
+        "y": 194,
+        "wires": []
+    },
+    {
+        "id": "cb6c6a34.d8e2e8",
+        "type": "debug",
+        "z": "f30a097.f8d40f8",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 745,
+        "y": 445,
+        "wires": []
+    },
+    {
+        "id": "d0e87662.1eee38",
+        "type": "mqtt-broker",
+        "z": "",
+        "broker": "192.168.0.203",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": ""
+    }
+]
