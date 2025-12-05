@@ -24,10 +24,12 @@ This is the code for this YouTube video: https://youtu.be/gADIb1Xw8PE
 
 ## 🔧 Platform Compatibility
 
-| Platform | Status | Notes |
-|----------|--------|-------|
-| ESP32 | ✅ Supported | Use this library |
-| ESP8266 | ⚠️ Use alternative | Use [IRremoteESP8266](https://github.com/markszabo/IRremoteESP8266) and replace `WiFi.h` with `ESP8266WiFi.h` |
+| Platform | Status | Library to Use |
+|----------|--------|----------------|
+| ESP32 | ✅ Supported | **ESP32-IRremote** (this repo) |
+| ESP8266 | ⚠️ Use alternative | [IRremoteESP8266](https://github.com/markszabo/IRremoteESP8266) |
+
+> ❌ **Do NOT use IRremoteESP8266 on ESP32 with this project!** It may cause crashes when sending IR signals. Use the `ESP32-IRremote` library from this repository instead.
 
 ## 📡 IRMQTT_ESP32
 
