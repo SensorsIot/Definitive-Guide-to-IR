@@ -4,13 +4,8 @@ This is a modified version of the IRremote library with ESP32 support.
 
 ## 📥 Installation
 
-> ⚠️ **Important:** Do NOT download from the Releases page of the original IRremote repo. Use the parent repository instead.
-
-**See the main [README](../README.md) for installation instructions.**
-
-Quick steps:
-1. Download the parent repository: https://github.com/SensorsIot/Definitive-Guide-to-IR
-2. Copy this entire `ESP32-IRremote` folder to your Arduino libraries folder
+1. Download this repository: https://github.com/SensorsIot/Definitive-Guide-to-IR
+2. Copy this `ESP32-IRremote` folder to your Arduino libraries folder
 3. Restart Arduino IDE
 
 ## Supported Boards
